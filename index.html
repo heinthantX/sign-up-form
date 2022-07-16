@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./config.js"></script>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body class="h-screen bg-[#F8F8F8] flex items-center justify-center">
+    <section
+      class="w-[900px] max-w-[90%] flex bg-white rounded-xl shadow-xl shadow-gray-200"
+    >
+      <form
+        class="p-8 md:p-20 md:pr-12 w-full md:w-1/2 space-y-6"
+        id="sign-up"
+        name="sign-up"
+        method="get"
+      >
+        <div><h1 class="font-bold text-4xl">Sign up</h1></div>
+        <div class="flex gap-2">
+          <div class="relative w-1/2">
+            <input class="input" type="text" id="first-name" placeholder=" " />
+            <label for="first-name">First Name</label>
+          </div>
+          <div class="relative w-1/2">
+            <input class="input" type="text" id="last-name" placeholder=" " />
+            <label for="last-name">Last Name</label>
+          </div>
+        </div>
+        <div class="relative">
+          <input class="input" type="text" id="email" placeholder=" " />
+          <label for="email">Email</label>
+        </div>
+        <div class="relative">
+          <input class="input" type="text" id="password" placeholder=" " />
+          <label for="password">Password</label>
+        </div>
+        <div class="relative">
+          <input
+            class="input"
+            type="text"
+            id="confirm-password"
+            placeholder=" "
+          />
+          <label for="confirm-password">Confirm Password</label>
+        </div>
+        <div>
+          <input class="accent-black" type="checkbox" id="term-checkbox" />
+          <label class="text-xs" for="term-checkbox"
+            >I agree all statements in
+            <a href="#" class="underline">Terms of service</a></label
+          >
+        </div>
+        <div>
+          <button
+            type="submit"
+            id="signup-btn"
+            disabled
+            class="px-6 py-2.5 bg-gray-800 text-white font-medium text-xs leading-tight rounded shadow-md hover:bg-gray-900 hover:shadow-lg focus:bg-gray-900 active:bg-gray-900 active:shadow-lg transition duration-300 ease-in-out disabled:bg-gray-500"
+          >
+            SIGN UP
+          </button>
+        </div>
+      </form>
+      <figure class="hidden md:flex flex-col justify-evenly items-center w-1/2">
+        <img src="./src/images/signup-image.jpg" alt="sign up image" />
+        <a class="underline text-center block decoration-gray-500" href="#"
+          >I am already member</a
+        >
+      </figure>
+    </section>
+    <script src="./index.js"></script>
+  </body>
+</html>
