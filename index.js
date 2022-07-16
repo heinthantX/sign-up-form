@@ -31,7 +31,7 @@ signUpForm.addEventListener('submit', function (e) {
     {
       isValidate: validatePassword,
       node: passwordInput,
-      msg: 'Password should contain at least one capital letter, one number and 8 character long',
+      msg: 'Password should contain at least one capital letter, one number and 8 characters',
     },
     {
       isValidate: validateConfirmPassword,
