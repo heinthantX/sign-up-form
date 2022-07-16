@@ -42,11 +42,15 @@ signUpForm.addEventListener('submit', function (e) {
 
   if (validateArray.every((obj) => obj.isValidate === true)) {
     // continue validation
+    validateArray.forEach((val) => {
+      const parentNode = val.node.parentNode;
+      parentNode.removeChild(parentNode.lastChild);
+    });
   } else {
     validateArray.forEach((val) => {
+      const parentNode = val.node.parentNode;
+      parentNode.removeChild(parentNode.lastChild);
       if (!val.isValidate) {
-        const parentNode = val.node.parentNode;
-        parentNode.removeChild(parentNode.lastChild);
         parentNode.innerHTML += errorTmp(val.msg);
       }
     });
