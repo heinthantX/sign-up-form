@@ -42,7 +42,6 @@ signUpForm.addEventListener('submit', function (e) {
 
   if (validateArray.every((obj) => obj.isValidate === true)) {
     // continue validation
-    return true;
   } else {
     validateArray.forEach((val) => {
       if (!val.isValidate) {
