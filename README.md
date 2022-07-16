@@ -23,3 +23,10 @@ The whole template is built with
 - Github: [GitHub](https://github.com/heinthantX)
 - Twitter: [Twitter](https://twitter.com/HeinThantX_)
 - Linkedin: [Linkedin](https://www.linkedin.com/in/hein-thant-75372b245/)
+
+## Acknowledgements
+
+Thanks to
+
+- [Colorlib for design (Colorlib Reg Form v7)
+  ](https://colorlib.com/wp/free-bootstrap-registration-forms/)
