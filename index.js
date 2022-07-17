@@ -12,6 +12,7 @@ termCheckBox.addEventListener('change', function (e) {
 
 signUpForm.addEventListener('submit', function (e) {
   e.preventDefault();
+
   const emailInput = e.target[2];
   const passwordInput = e.target[3];
   const confirmPasswordInput = e.target[4];
@@ -44,12 +45,28 @@ signUpForm.addEventListener('submit', function (e) {
     // continue validation
     validateArray.forEach((val) => {
       const parentNode = val.node.parentNode;
-      parentNode.removeChild(parentNode.lastChild);
+      parentNode.innerHTML = parentNode.innerHTML.replace(
+        /<span.*?>.*?<\/span>/gi,
+        ''
+      );
     });
+
+    if (
+      window.confirm(
+        `Are you sure you want to sign up with "${emailInput.value}"?`
+      )
+    ) {
+      alert('Thank for using our app!');
+    } else {
+      alert('Ok! Please fill the form again.');
+    }
   } else {
     validateArray.forEach((val) => {
       const parentNode = val.node.parentNode;
-      parentNode.removeChild(parentNode.lastChild);
+      parentNode.innerHTML = parentNode.innerHTML.replace(
+        /<span.*?>.*?<\/span>/gi,
+        ''
+      );
       if (!val.isValidate) {
         parentNode.innerHTML += errorTmp(val.msg);
       }
