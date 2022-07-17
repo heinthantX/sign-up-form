@@ -12,6 +12,8 @@ termCheckBox.addEventListener('change', function (e) {
 
 signUpForm.addEventListener('submit', function (e) {
   e.preventDefault();
+  const firstNameInput = e.target[0];
+  const lastNameInput = e.target[1];
 
   const emailInput = e.target[2];
   const passwordInput = e.target[3];
@@ -43,6 +45,9 @@ signUpForm.addEventListener('submit', function (e) {
 
   if (validateArray.every((obj) => obj.isValidate === true)) {
     // continue validation
+    firstNameInput.value = ''; // just for clear input after form submitted
+    lastNameInput.value = ''; // just for clear input after form submitted
+
     validateArray.forEach((val) => {
       const parentNode = val.node.parentNode;
       parentNode.innerHTML = parentNode.innerHTML.replace(
