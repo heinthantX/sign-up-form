@@ -1,4 +1,4 @@
-# STOP-WATCH
+# Sign UP Form
 
 ## About the template
 
